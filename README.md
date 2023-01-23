@@ -35,11 +35,12 @@ origin path: /home/zhb502/raw_data/2020AESRC/American_English_Speech_Data/G00473
 your path: /home/jicheng/ASR-data/American_English_Speech_Data/G00473/G00473S1002.wav
 sed -i "s#/home/zhb502/raw_data/2020AESRC/#/home/jicheng/ASR-data/#g" data/train/wav.scp
 ```
-3. run `prepare_data_8k.sh` scripts
+
+3. run `prepare_data_8k.sh` scripts 
 What this script does is:
-1. Downsample the original 16k audio to 8k.[train, cv_all, test, musan_noise]
-2. Add 8k noise to the test set
-3. Upsample to 16k
+- Downsample the original 16k audio to 8k.[train, cv_all, test, musan_noise]
+- Add 8k noise to the test set
+- Upsample to 16k
 ```
 bash prepare_data_8k.sh --steps 1-3
 ```
